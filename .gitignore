@@ -1,3 +1,4 @@
 .env
 /venv311/
+/venv/
 /__pycache__/

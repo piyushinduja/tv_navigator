@@ -6,14 +6,14 @@ import subprocess
 class SystemVolume:
     def __init__(self):
         self.platform = platform.system()
-        # if self.platform == 'Windows':
-        #     from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
-        #     from comtypes import CLSCTX_ALL
-        #     from ctypes import cast, POINTER
+        if self.platform == 'Windows':
+            from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+            from comtypes import CLSCTX_ALL
+            from ctypes import cast, POINTER
             
-        #     devices = AudioUtilities.GetSpeakers()
-        #     interface = devices.device.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
-        #     self.volume_control = cast(interface, POINTER(IAudioEndpointVolume))
+            devices = AudioUtilities.GetSpeakers()
+            interface = devices.device.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+            self.volume_control = cast(interface, POINTER(IAudioEndpointVolume))
     
     def increase(self):
         if self.platform == 'Darwin':

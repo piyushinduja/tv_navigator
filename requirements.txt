@@ -1,10 +1,27 @@
-SpeechRecognition
-pyaudio
+# Core Dependencies
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.13
 openai>=1.0.0
+python-dotenv>=1.0.0
+
+# Computer Vision
+opencv-python>=4.8.0
+mediapipe==0.10.14
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+pandas>=2.0.0
+
+# System Control
 keyboard>=0.13.5
 pynput>=1.7.6
+
+# GUI
+tk>=8.6
+
+# Windows-specific dependencies
 pygetwindow>=0.0.9; sys_platform == 'win32'
-pycaw; sys_platform == 'win32'
-comtypes; sys_platform == 'win32'
-pygetwindow
-dotenv
+pycaw>=2023.8.22; sys_platform == 'win32'
+comtypes>=1.2.0; sys_platform == 'win32'

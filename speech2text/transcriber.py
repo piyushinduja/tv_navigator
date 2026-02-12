@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add the root directory to PYTHONPATH so remote_ai can be found
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import speech_recognition as sr
 import threading
 from remote_ai.main import ai_agent
